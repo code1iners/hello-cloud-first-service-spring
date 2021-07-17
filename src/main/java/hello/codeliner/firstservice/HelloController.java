@@ -16,9 +16,14 @@ public class HelloController {
         return "Hello 1";
     }
 
-    @GetMapping(path = "messages")
+    @GetMapping(path = "/messages")
     public String messages(@RequestHeader("first-request") String header) {
         log.info("header:{}",header);
         return "Messages 1";
+    }
+
+    @GetMapping(path = "/check")
+    public String check() {
+        return "Check 1";
     }
 }
